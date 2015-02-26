@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Minihower by not-so-creative</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Minihower</h1>
+        <p class="header">A single context eisenhower deicison graph.</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/not-so-creative/minihower/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/not-so-creative/minihower/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/not-so-creative/minihower">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/not-so-creative">not-so-creative</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="minihower" class="anchor" href="#minihower" aria-hidden="true"><span class="octicon octicon-link"></span></a>Minihower</h1>
+
+<p>A single context eisenhower decision graph using
+<a href="http://mozilla.github.io/localforage">LocalForage</a> and
+<a href="http://backbonejs.org">Backbone</a></p>
+
+<p>This was developed as a small concept for the direction that
+<a href="https://github.com/not-so-creative/eisenhower">not-so-creative/eisenhower</a>
+could take if integrating iconography and categorization beyond that of a
+"topic" (context).</p>
+
+<h2>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h2>
+
+<p>Make sure you have both <strong>grunt-cli</strong> and <strong>bower</strong> installed.</p>
+
+<p>npm install -g grunt-cli bower</p>
+
+<p>Once you have a copy of this repository a simple <code>npm install</code> will grab all
+the dependencies for development, and it will run <code>bower install</code> for you.</p>
+
+<h3>
+<a id="launch-development-server" class="anchor" href="#launch-development-server" aria-hidden="true"><span class="octicon octicon-link"></span></a>Launch Development Server</h3>
+
+<p>Minihower uses <a href="https://github.com/grunt/grunt-contrib-connect">grunt-contrib-connect</a>
+to provide a simple http server that serves the <code>/public</code> directory of the
+project.</p>
+
+<p>grunt serve</p>
+
+<p>This will also launch a watch task + livereload server, meaning all file changes
+you make while the server is running get built and loaded into the browser
+automagically.</p>
+
+<h3>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h3>
+
+<p>The only testing that exists for this project is a simple
+<a href="http://jshint.com">jshint</a>. If you want more tests feel free to send a
+pull request.</p>
+
+<p>Testing is run as a part of the development server, and build tasks, however if
+you wish to run just the tests use <code>grunt test</code>.</p>
+
+<h3>
+<a id="build" class="anchor" href="#build" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build</h3>
+
+<p>For a more production ready build, with minified styles and scripts, you can use
+<code>grunt build</code>.</p>
+
+<h3>
+<a id="play-nice" class="anchor" href="#play-nice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Play Nice</h3>
+
+<p>Where possible use an <a href="http://editorconfig.org/">EditorConfig</a> compatible editor/plugin.</p>
+
+<ul>
+<li>Remove trailing whitespace from files.</li>
+<li>Use ASCII filenames.</li>
+<li>Run <code>grunt test</code> before commit and check for errors.</li>
+</ul>
+
+<p><strong>Do this all with ease!</strong></p>
+
+<pre><code>mv .git/hooks/pre-commit.sample .git/hooks/pre-commit
+echo "\n# run grunt test before commit, abort if errors\ngrunt test" &gt;&gt; .git/hooks/pre-commit
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><strong>Unless otherwise stated</strong></p>
+
+<p>This Source Code Form is subject to the terms of the Mozilla Public License,
+v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain
+one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
