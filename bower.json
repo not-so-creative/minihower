@@ -1,0 +1,32 @@
+{
+  "name": "minihower",
+  "version": "1.0.0",
+  "authors": [
+    "William Duyck <fuzzyfox0@gmail.com>"
+  ],
+  "description": "A single context eisenhower decision graph.",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/fuzzyfox/minihower",
+  "keywords": [
+    "ToDo",
+    "Task",
+    "Management",
+    "Productivity",
+    "Eisenhower"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "bootstrap": "~3.3.2",
+    "localforage-backbone": "^0.5.0",
+    "fontawesome": "~4.3.0",
+    "svg.js": "~1.0.1"
+  }
+}

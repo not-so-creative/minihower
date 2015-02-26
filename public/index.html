@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="/assets/css/minihower.css">
+
+  <title>Minihower</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-bars fa-fw"></span>
+        </button>
+        <a class="navbar-brand" href="/">Minihower</a>
+      </div>
+
+      <div class="collapse navbar-collapse" collapse="isCollapsed">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/fuzzyfox/minihower"><span class="fa fa-github"></span> fuzzyfox/minihower</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" id="minihowerApp">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div id="eisenhowerGraph">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <form action="#" id="createTask">
+          <div class="form-group">
+            <label for="description" class="sr-only">What needs to be done?</label>
+            <input type="text" class="form-control" name="description" id="description" placeholder="What needs to be done?" required>
+          </div>
+
+          <div class="form-group">
+            <label for="icon" class="sr-only">Choose a category.</label>
+            <select name="icon" id="icon" class="form-control">
+              <option value="" selected> Default</option>
+              <option value=""> Task</option>
+              <option value=""> Priority Task</option>
+              <option value=""> Event</option>
+              <option value=""> Coding</option>
+              <option value=""> Email</option>
+              <option value=""> Social</option>
+              <option value=""> Think / Explore</option>
+              <option value=""> Health + Fitness</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-plus"></i> Add Task
+          </button>
+          <button type="reset" class="btn btn-default">
+            <i class="fa fa-times"></i> Cancel
+          </button>
+        </form>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>state</th>
+              <th>description</th>
+            </tr>
+          </thead>
+          <tbody id="taskList">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script type="text/template" id="task-template">
+    <td><% if( ctx.color ){ %><i class="fa fa-circle" style="color:<%- ctx.color %>"></i><% } %></td>
+    <td><%= ctx.completed ? 'complete' : 'incomplete' %></td>
+    <td><%- ctx.description %></td>
+  </script>
+
+  <!-- bootstrap js (remove in time) -->
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+  <!-- backbone js -->
+  <script src="/vendor/underscore/underscore.js"></script>
+  <script src="/vendor/backbone/backbone.js"></script>
+  <script src="/vendor/localforage/dist/localforage.min.js"></script>
+  <script src="/vendor/localforage-backbone/dist/localforage.backbone.min.js"></script>
+
+  <!-- svg js -->
+  <script src="/vendor/svg.js/dist/svg.min.js"></script>
+
+  <!-- app -->
+  <script src="/assets/js/graph.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

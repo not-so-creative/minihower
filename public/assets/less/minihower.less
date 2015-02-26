@@ -1,0 +1,23 @@
+// bootstrap
+@import '../../vendor/bootstrap/less/bootstrap';
+// // bootstrap select
+// @import '../vendor/bootstrap-select/less/bootstrap-select';
+// font-awesome
+@import '../../vendor/fontawesome/less/font-awesome';
+@fa-font-path: '../../vendor/fontawesome/fonts';
+
+#eisenhowerGraph {
+  .plot {
+    ellipse, text, tspan {
+      cursor: pointer;
+    }
+  }
+}
+
+#createTask {
+  display: none;
+
+  select, option {
+    font-family: 'FontAwesome', @font-family-base;
+  }
+}
