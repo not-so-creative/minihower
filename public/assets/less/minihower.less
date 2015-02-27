@@ -8,8 +8,13 @@
 
 #eisenhowerGraph {
   .plot {
+    transition: opacity .4s ease;
     ellipse, text, tspan {
       cursor: pointer;
+    }
+
+    &.complete {
+      opacity: .4;
     }
   }
 }
@@ -19,5 +24,15 @@
 
   select, option {
     font-family: 'FontAwesome', @font-family-base;
+  }
+}
+
+#taskList {
+  tr {
+    transition: opacity .4s ease;
+
+    &.complete {
+      opacity: .4;
+    }
   }
 }

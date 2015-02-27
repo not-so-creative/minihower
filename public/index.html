@@ -80,15 +80,14 @@
   </main>
 
   <script type="text/template" id="task-template">
-    <td><% if( ctx.color ){ %><i class="fa fa-circle" style="color:<%- ctx.color %>"></i><% } %></td>
-    <td><%= ctx.completed ? 'complete' : 'incomplete' %></td>
-    <td><%- ctx.description %></td>
+    <td class="task-color"><% if( ctx.color ){ %><i class="fa fa-circle" style="color:<%- ctx.color %>"></i><% } %></td>
+    <td class="task-state"><%= ctx.completed ? 'complete' : 'incomplete' %></td>
+    <td class="task-description"><%- ctx.description %></td>
   </script>
 
   <!-- bootstrap js (remove in time) -->
   <script src="/vendor/jquery/dist/jquery.min.js"></script>
   <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
   <!-- backbone js -->
   <script src="/vendor/underscore/underscore.js"></script>
