@@ -13,7 +13,7 @@ var app = app || {};
 
     // delegate events for creating new items and clearing completed ones
     events: {
-
+      'click .task-state': 'toggleCompleted'
     },
 
     // listen to events from the model and re-rendering.
@@ -25,11 +25,18 @@ var app = app || {};
     // re-render task item.
     render: function() {
       this.$el.html( this.template( this.model.toJSON() ) );
-      this.$el.toggleClass( 'completed', this.model.get( 'completed' ) );
+      this.$el.toggleClass( 'complete', this.model.get( 'completed' ) );
+      this.$el.prop( 'id', 'task-' + this.model.get( 'id' ) );
 
       var graphReadonly = graph.isReadonly();
       graph.readonly( false );
-      this.plot = graph.plotTask( this.model.toJSON() );
+      this.plot = this.plot || graph.plotTask( this.model.toJSON() );
+      if( this.model.get( 'completed' ) ) {
+        this.plot.addClass( 'complete' );
+      }
+      else {
+        this.plot.removeClass( 'complete' );
+      }
       graph.readonly( graphReadonly );
 
       return this;

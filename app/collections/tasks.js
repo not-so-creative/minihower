@@ -7,7 +7,7 @@ var app = app || {};
   var Tasks = Backbone.Collection.extend({
     // save all tasks under the "Tasks" namespace
     sync: Backbone.localforage.sync( 'Tasks' ),
-    
+
     // reference this collections model
     model: app.Task
   });
